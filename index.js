@@ -10,6 +10,10 @@ require({
       console.log("This is a log message [%o]", arguments);
     });
 
+    emitter.on("log", function () {
+      console.log("This is another log message [%o]", arguments);
+    });
+
     emitter.emit("log", "string", 123, false);
   }
 });
